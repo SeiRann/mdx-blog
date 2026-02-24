@@ -4,14 +4,51 @@ const components: MDXComponents = {};
 
 export function useMDXComponents(): MDXComponents {
   return {
-    h1: (props) => <h1 className="text-6xl" {...props} />,
-    h2: (props) => <h2 className="text-4xl" {...props} />,
-    h3: (props) => <h3 className="text-2xl" {...props} />,
-    h4: (props) => <h4 className="text-lg" {...props} />,
-    h5: (props) => <h5 className="text-md" {...props} />,
-    h6: (props) => <h6 className="text-sm" {...props} />,
-    p: (props) => <p className="my-2" {...props} />,
-    a: (props) => <a className="text-blue-500" {...props} />,
+    h1: (props) => (
+      <h1
+        className="text-6xl dark:text-dark-red-foreground text-red-foreground"
+        {...props}
+      />
+    ),
+    h2: (props) => (
+      <h2
+        className="text-4xl dark:text-dark-red-foreground text-red-foreground"
+        {...props}
+      />
+    ),
+    h3: (props) => (
+      <h3
+        className="text-2xl dark:text-dark-red-foreground text-red-foreground"
+        {...props}
+      />
+    ),
+    h4: (props) => (
+      <h4
+        className="text-lg dark:text-dark-red-foreground text-red-foreground"
+        {...props}
+      />
+    ),
+    h5: (props) => (
+      <h5
+        className="text-md dark:text-dark-red-foreground text-red-foreground"
+        {...props}
+      />
+    ),
+    h6: (props) => (
+      <h6
+        className="text-sm dark:text-dark-red-foreground text-red-foreground"
+        {...props}
+      />
+    ),
+    p: (props) => (
+      <p
+        className="my-2 dark:text-dark-red-foreground text-red-foreground"
+        {...props}
+      />
+    ),
+    a: (props) => (
+      <a className="text-green-foreground hover:underline" {...props} />
+    ),
     em: (props) => <em className="italic" {...props} />,
     strong: (props) => <strong className="font-bold" {...props} />,
     hr: (props) => <hr className="my-4" {...props} />,
