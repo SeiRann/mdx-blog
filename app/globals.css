@@ -1,4 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Tangerine:wght@400;700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-tangerine: "Tangerine", sans-serif;
+}
 
 @custom-variant dark (&:where([data-theme=gruvbox-dark], [data-theme=gruvbox-dark] *));
 
