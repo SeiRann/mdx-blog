@@ -48,7 +48,7 @@ export function useMDXComponents(): MDXComponents {
       />
     ),
     a: (props) => (
-      <Link className="text-green-foreground hover:underline" {...props} />
+      <Link className="dark:text-green-foreground hover:underline" {...props} />
     ),
     em: (props) => <em className="italic" {...props} />,
     strong: (props) => <strong className="font-bold" {...props} />,
