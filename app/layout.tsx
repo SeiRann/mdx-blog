@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { switchTheme, Theme } from "@/components/themeSwitcher";
+import NavBar from "@/components/navbar.mdx";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,10 +17,15 @@ export default function RootLayout({
     <html lang="en" data-theme={switchTheme(Theme.dark)}>
       <body
         className={
-          "antialiased bg-background dark:bg-dark-background text-foreground dark:text-dark-foreground"
+          "flex-col min-h-screen  antialiased bg-background dark:bg-dark-background text-foreground dark:text-dark-foreground"
         }
       >
-        {children}
+        <div className="flex flex-row justify-around bg-dark-foreground-2 dark:bg-dark-background-0h ">
+          <NavBar />
+        </div>
+        <div className="flex flex-col items-center mt-5">
+          <div>{children}</div>
+        </div>
       </body>
     </html>
   );
