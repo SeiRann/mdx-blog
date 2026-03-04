@@ -52,7 +52,12 @@ export function useMDXComponents(): MDXComponents {
     ),
     em: (props) => <em className="italic" {...props} />,
     strong: (props) => <strong className="font-bold" {...props} />,
-    hr: (props) => <hr className="my-4" {...props} />,
+    hr: (props) => (
+      <hr
+        className="my-4 dark:text-dark-blue-foreground text-red-foreground"
+        {...props}
+      />
+    ),
     img: (props) => <img className="my-4 rounded-md" {...props} />,
     li: (props) => <li className="ml-4" {...props} />,
     ol: (props) => <ol className="my-2 ml-4 list-decimal" {...props} />,
