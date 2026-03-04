@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Example from "./pages/example.mdx";
+"use client";
+import HomePage from "@/app/pages/home.mdx";
 
 export default function Home() {
   return (
     <div>
-      <Example name="Gay" />
+      <HomePage />
     </div>
   );
 }
