@@ -43,7 +43,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     p: (props) => (
       <p
-        className="text-sm sm:text-md md:text-lg  my-2 dark:text-dark-blue-foreground text-red-foreground"
+        className="text-sm sm:text-md md:text-lg my-6 sm:my-4 md:my-2 dark:text-dark-blue-foreground text-red-foreground"
         {...props}
       />
     ),

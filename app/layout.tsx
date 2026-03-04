@@ -26,7 +26,7 @@ export default function RootLayout({
         <div className="flex flex-row justify-around bg-dark-foreground-2 dark:bg-dark-background-0h p-3">
           <NavBar />
         </div>
-        <div className="flex flex-col items-left sm:items-center mt-0 m-6 sm:mt-5 ">
+        <div className="flex flex-col items-left sm:items-center mt-1 m-6 sm:mt-5 ">
           <div>{children}</div>
         </div>
       </body>
