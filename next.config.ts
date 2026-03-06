@@ -8,6 +8,7 @@ const withMdx = nextMdx({
 
 const nextConfig: NextConfig = withMdx({
   pageExtensions: ["md", "mdx", "tsx", "ts", "jsx", "js"],
+  transpilePackages: ["three"],
 });
 
 export default nextConfig;
