@@ -20,13 +20,13 @@ export default function RootLayout({
     <html lang="en" data-theme={switchTheme(Theme.dark)}>
       <body
         className={
-          "flex-col min-h-screen  antialiased bg-background dark:bg-dark-background text-foreground dark:text-dark-foreground"
+          "flex-col  antialiased bg-background dark:bg-dark-background text-foreground dark:text-dark-foreground"
         }
       >
         <div className="flex flex-row justify-around bg-dark-foreground-2 dark:bg-dark-background-0h p-3">
           <NavBar />
         </div>
-        <div className="flex flex-col items-center mt-5">
+        <div className="flex flex-col items-left sm:items-center mt-1 m-6 sm:mt-5 ">
           <div>{children}</div>
         </div>
       </body>
