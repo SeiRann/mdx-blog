@@ -1,33 +1,51 @@
-"use client";
-
 import { useRef } from "react";
-import { ObjectMap, useFrame } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
-import { Object3D, Group } from "three";
+import { useFrame } from "@react-three/fiber";
+import { Object3D, Vector3 } from "three";
 
 type Props = {
   scene: Object3D;
+  position?: [number, number, number];
+  rotation?: [number, number, number];
+  scale?: number;
+  hoveredScale?: number;
+  onClick?: () => void;
 };
 
-export default function Clickable3D({ scene }: Props) {
+export default function Clickable3D({
+  scene,
+  position = [0, 0, 0],
+  rotation = [0, 0, 0],
+  scale = 1,
+  hoveredScale = 1.3,
+  onClick = () => console.log("clicked"),
+}: Props) {
   const group = useRef<any>(null);
   const hovered = useRef(false);
-
-  console.log(scene); // debug if the model is loaded
+  const temp = new Vector3();
 
   useFrame((state, delta) => {
+    if (!group.current) return;
+
+    // ✅ rotate
     group.current.rotation.y += delta;
-    const target = hovered.current ? 1.3 : 1;
-    group.current.scale.lerp({ x: target, y: target, z: target }, 0.1);
+
+    // ✅ scale on hover
+    const target = hovered.current ? hoveredScale : scale;
+    temp.setScalar(target);
+    group.current.scale.lerp(temp, 0.1);
   });
 
   return (
     <group
       ref={group}
+      position={position}
+      rotation={rotation}
+      scale={scale}
       onPointerOver={() => (hovered.current = true)}
       onPointerOut={() => (hovered.current = false)}
+      onClick={onClick}
     >
-      <primitive object={scene} scale={30} />
+      <primitive object={scene} />
     </group>
   );
 }
