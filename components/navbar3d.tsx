@@ -3,8 +3,10 @@ import { Canvas } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import Clickable3D from "@/components/clickable3d";
 import { Camera, Vector3 } from "three";
+import { useRouter } from "next/navigation";
 
 export default function NavBar3D() {
+  const router = useRouter();
   const mailbox = useGLTF("/Mailbox.glb");
   const capy = useGLTF("/Capybara.glb");
   const house = useGLTF("/housemodel.glb");
@@ -15,8 +17,8 @@ export default function NavBar3D() {
   };
 
   return (
-    <div className="w-screen h-80 flex ">
-      <Canvas className="bg-red-200" camera={sharedCamera}>
+    <div className="w-screen h-50 flex bg-dark-foreground-2 dark:bg-dark-background-0h p-3">
+      <Canvas camera={sharedCamera}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
         <Clickable3D
@@ -24,11 +26,25 @@ export default function NavBar3D() {
           scale={80}
           hoveredScale={100}
           position={[0, -1, 0]}
-          onClick={() => }
+          rotation={[0, -2, 0]}
+          onClick={() => router.push("/")}
         />
         {/* <Clickable3D scene={scene2} /> */}
       </Canvas>
-      <Canvas className="bg-green-200" camera={sharedCamera}>
+
+      <Canvas camera={sharedCamera}>
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[5, 5, 5]} intensity={1} />
+        <Clickable3D
+          scene={capy.scene}
+          scale={0.5}
+          hoveredScale={0.55}
+          position={[0, -1, 0]}
+          rotation={[0, 1, 0]}
+          onClick={() => router.push("/about")}
+        />
+      </Canvas>
+      <Canvas camera={sharedCamera}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
 
@@ -37,16 +53,8 @@ export default function NavBar3D() {
           scale={3}
           hoveredScale={3.5}
           position={[0, -1.5, 0]}
-        />
-      </Canvas>
-      <Canvas className="bg-blue-200" camera={sharedCamera}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} intensity={1} />
-        <Clickable3D
-          scene={capy.scene}
-          scale={0.5}
-          hoveredScale={0.55}
-          position={[0, -1, 0]}
+          rotation={[0, 1, 0]}
+          onClick={() => router.push("/contacts")}
         />
       </Canvas>
     </div>

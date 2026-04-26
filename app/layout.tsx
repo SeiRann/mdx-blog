@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { switchTheme, Theme } from "@/components/themeSwitcher";
 import NavBar from "@/components/navbar.mdx";
+import NavBar3D from "@/components/navbar3d";
 
 export const metadata: Metadata = {
   title: "My little corner",
@@ -23,8 +24,8 @@ export default function RootLayout({
           "flex-col  antialiased bg-background dark:bg-dark-background text-foreground dark:text-dark-foreground"
         }
       >
-        <div className="flex flex-row justify-around bg-dark-foreground-2 dark:bg-dark-background-0h p-3">
-          <NavBar />
+        <div className="flex flex-row justify-around bg-dark-foreground-2 dark:bg-dark-background-0h">
+          <NavBar3D />
         </div>
         <div className="flex flex-col items-left sm:items-center mt-1 m-6 sm:mt-5 ">
           <div>{children}</div>
