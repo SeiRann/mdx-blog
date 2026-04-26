@@ -66,9 +66,31 @@ export default function NavBar3D() {
             onClick={() => router.push("/contacts")}
           />
         </Canvas>
+
+        {/* <div>
+
+        </div> */}
       </div>
     );
   }
+  // <div>
+  //   <Canvas camera={sharedCamera}>
+  //     <ambientLight intensity={0.5} />
+  //     <directionalLight position={[5, 5, 5]} intensity={1} />
+
+  //     <Clickable3D
+  //       scene={mailbox.scene}
+  //       scale={3}
+  //       hoveredScale={3.5}
+  //       position={[0, -1.5, 0]}
+  //       rotation={[0, 1, 0]}
+  //       onClick={() => router.push("/contacts")}
+  //     />
+  //   </Canvas>
+  //   <div>
+  //     {/* add 2 more models like up there and make it look similar to the non3d navbar */}
+  //   </div>
+  // </div>
 
   return is3D ? <NavBar3D /> : <NavBar on3D={on3D} />;
 }
