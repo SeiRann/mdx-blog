@@ -1,5 +1,17 @@
+import ThemeButton from "@/components/themeButton";
+import Button3D from "@/components/3dtoggle";
+
+<div className="flex flex-row justify-around items-center w-full">
 # [Home](./ "home")
 
 # [About](./about "about")
 
-# [Contacts](./contacts "contacts")
+<div className="flex items-center">
+  # [Contacts](./contacts "contacts")
+  <div className="flex flex-col items-center justify-around">
+    <ThemeButton />
+    <Button3D on3D={props.on3D} />
+  </div>
+</div>
+
+</div>
