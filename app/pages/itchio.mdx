@@ -1,10 +1,27 @@
 ## Game Projects
 
-I have made a couple of games that are on my [itch.io](https://seirann.itch.io/)
+I have made a couple of games that you can check out on my [itch.io](https://seirann.itch.io/)
 
-My game development journey started my passion for coding. The main reason that made me start learning programming was me wanting to make mods for minecraft, so I thought Minecraft is programmed in Java so I need to learn it, but I never made a mod I got too into coding.
+### The Beginning of Game Development
 
-The first try at making a game was when I have participated in Ludum Dare 54 with the theme being Limited Space. I arranged a team of 5 people, it was Me and 4 of my class mates, we had an artist, a music guy, me and the other 2 guys as programmers. The idea we had was you have a character that has to run around and collect as many things and drop them in a hole and the level would slowly shrink, so you have less and less space available.
+My game development journey started my passion for coding. The main reason that made me start learning programming was me wanting to make mods for minecraft, so I thought Minecraft is programmed in Java so I need to learn it, I started learning and coding in it **AND THEN** I never made a mod, because I got too into coding.
 
-Now this was my first ever game jam and we were very ambitious and we tried to do a lot, but due to just having too big of a project for a 2 day jam we failed to finish the game in time and eventually school homework was catching up to us and we had to give up. It was intense, it was exhilarating and it was fun. The fun and the intense vibe stuck to me, and I promised to myself that I will participate in another game jam.
+The first try at making a game was when I have participated in Ludum Dare 54 with the theme being Limited Space. I arranged a team of 5 people, it was Me and 4 of my class mates, we had an artist, a music guy, me and the other 2 guys as programmers. The idea we had was you have a character that has to run around and collect as many things as possible and drop them in a hole and the level would slowly shrink, so you have less and less space available.
 
+Now this was my first ever game jam and we were very ambitious and we tried to do a lot, but due to just having too big of a project for a 2 day jam we failed to finish the game in time and eventually school homework was catching up to us and we had to give up. It was intense, it was exhilarating and it was fun. The fun and the intense vibe stuck to me, and I promised to myself that I would participate in another game jam.
+
+### Tiny Type
+
+Then after moving to Canada, on a weekend I got a notification that Ludum Dare is gonna be up in a week and it was the 56th one. And, because I had nothing to do that weekend I participated. The theme was **Tiny Creatures**. I had plenty of ideas, but I had to be realistic and I decided as a one man army to do a typing game featuring cute animals names in the text and also if you reach a milestone in accuracy, wpm, streak and a score calculated based on those 3 you unlock some cool art of animals.
+
+I probably developed some sort of narcolepsy during that weekend, I was running on like 5 coffees and sandwiches, _not healthy_ , but it kept me energized and motivated to finish all of the work needed for the game. I got to try my hand at my worst thing **ART!!!**. I found a fork of aseprite and used it to make all of the pixelart, which is quite different from drawing with pen and paper, had to do my research to understand how to do it properly.
+
+After trying to do the art(_I would not call it art_) for the keys and the pressed keys, I worked on the actual logic of the game, which was a bit weird as Godot has some text formatable nodes, but it is still a bit glitchy. The way I did it is kind of using the < a > tag and splitting the text into <a className='text-green-500'>correct text</a>, <a className='text-red-500'>wrong text</a>, and <a className='text-white'>base text or untyped text</a> and as you type you just shift the letters in the tag that you need. **It works**, but it is a bit glitchy still. 
+
+The metrics for the wpm used a timer and comparing the amount of words compared to the timer and based on time it calculates the wpm, it might not be the most accurate one, but like I said **it works**, and in a game jam that's what it's important. The streak is based on how many times in a row you typed correct words and it goes up by milestones, like 1x->2x after typing 10 words correctly, and it gets harder the higher the streak, but it also boosts your score. Accuracy is how accurately you typed the right letter out of all of the typed letters. And all of these metrics if you hit a milestone you open up a secret Tiny Creature, the first one is going to be **Gort**, which is also the icon of the game, for completing one full text.
+
+I finished the game by doing the music in a really cool software called BOSCA CEOIL. It is a 8-bit music creation software, with amazing options and a beautiful stylized GUI. Using my "expertise" in music(_a summer of doing piano_) I made a base track that plays as you play the game. At that point in time, I was so caffeinated that I started dancing in my apartment to the song I made, but I still think the song was pretty good, it is simple and nice.
+
+Here is the game, you can check it out on my itch.io as well, have fun typing.
+
+<iframe width="552" src="https://itch.io/embed/3021837" frameborder="0" height="167"><a href="https://seirann.itch.io/tinytype">TinyType by SeiRann</a></iframe>
